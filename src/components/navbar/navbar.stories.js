@@ -2,10 +2,9 @@ export default {
   title: 'Nav|Navbar'
 };
 
-export const withText = () => '<button class="btn">Hello World</button>';
+export const withoutMeni = () => `
+<div class="w-full">
+    <wc-navbar></wc-navbar>
+</div>
+`;
 
-export const withEmoji = () => {
-  const button = document.createElement('button');
-  button.innerText = '😀 😎 👍 💯';
-  return button;
-};
