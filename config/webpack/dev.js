@@ -1,3 +1,4 @@
+import path from 'path';
 import {rootPath} from './paths';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import tailwindcss from 'tailwindcss';
@@ -33,7 +34,11 @@ function buildConfig(configDirs) {
       publicPath: '/'
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.pcss']
+      extensions: ['.js', '.jsx', '.ts', '.pcss'],
+      alias: {
+        '@styles': path.join(configDirs.APP_DIR, 'styles'),
+        '@components': path.join(configDirs.APP_DIR, 'components')
+      }
     },
     module: {
       rules :[
@@ -71,6 +76,9 @@ function buildConfig(configDirs) {
             options: {
               presets: ['@babel/preset-typescript'],
               plugins: [
+                ['@babel/plugin-proposal-decorators', {
+                  decoratorsBeforeExport: true
+                }],
                 [
                   "@babel/plugin-transform-runtime",
                   {

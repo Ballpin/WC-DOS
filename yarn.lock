@@ -176,6 +176,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-create-class-features-plugin@npm:^7.10.3":
+  version: 7.10.3
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.10.3"
+  dependencies:
+    "@babel/helper-function-name": ^7.10.3
+    "@babel/helper-member-expression-to-functions": ^7.10.3
+    "@babel/helper-optimise-call-expression": ^7.10.3
+    "@babel/helper-plugin-utils": ^7.10.3
+    "@babel/helper-replace-supers": ^7.10.1
+    "@babel/helper-split-export-declaration": ^7.10.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: a1095c050c0503956d5c4716f9e01a8f12b6ef30dce24c646222029715b7a122ebe30e63a475e2e8f76fe0ada2b1918ddc6d1b026110706e516dbc629b587813
+  languageName: node
+  linkType: hard
+
 "@babel/helper-create-regexp-features-plugin@npm:^7.10.1, @babel/helper-create-regexp-features-plugin@npm:^7.8.3":
   version: 7.10.1
   resolution: "@babel/helper-create-regexp-features-plugin@npm:7.10.1"
@@ -285,6 +301,15 @@ __metadata:
   dependencies:
     "@babel/types": ^7.10.1
   checksum: b5fff63fd006f71f9a67227ad36243b77a37766f42144107d1fbba602707ff440ed49647238e703f8da9dd9ebc629e50010f8b64a9a32a19d23687af9781d55b
+  languageName: node
+  linkType: hard
+
+"@babel/helper-member-expression-to-functions@npm:^7.10.3":
+  version: 7.10.3
+  resolution: "@babel/helper-member-expression-to-functions@npm:7.10.3"
+  dependencies:
+    "@babel/types": ^7.10.3
+  checksum: 3d92522983e068e72ac97413f79b361a197ca1148cd2c3cbff908edfe7c3c5167f57649b485eaf2ce7b3ee1dd637a2fe013c2e936e12385723234667e59878a6
   languageName: node
   linkType: hard
 
@@ -534,6 +559,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-proposal-decorators@npm:^7.10.3":
+  version: 7.10.3
+  resolution: "@babel/plugin-proposal-decorators@npm:7.10.3"
+  dependencies:
+    "@babel/helper-create-class-features-plugin": ^7.10.3
+    "@babel/helper-plugin-utils": ^7.10.3
+    "@babel/plugin-syntax-decorators": ^7.10.1
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: e0689d6da8227330f1be971b7f727d0ccfb818aed42d9e74b0103e1a019625fe2d774f2684a791d9f93470e6e39abd0e032c026058d95051f70aaaefac7d55a9
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-proposal-dynamic-import@npm:^7.10.1":
   version: 7.10.1
   resolution: "@babel/plugin-proposal-dynamic-import@npm:7.10.1"
@@ -687,6 +725,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: a8560f829796cb82b8deccc8bb034bf6696dc0ccbdb32853fc6177612921dc4ae017ec5dae04dc9c251e55391576627b9c830baab91d6efe21d047f4c20eb224
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-syntax-decorators@npm:^7.10.1":
+  version: 7.10.1
+  resolution: "@babel/plugin-syntax-decorators@npm:7.10.1"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.10.1
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 19bc0c1dd751833bb03c7f28784a40389bf3ff4c4912536b57538131a51f756e43217c8c144e8c4e844ed2b7817159fb7813ab36991e7c70cc5bfca7d1edb5d6
   languageName: node
   linkType: hard
 
@@ -5960,6 +6009,7 @@ __metadata:
   resolution: "dwc@workspace:."
   dependencies:
     "@babel/core": ^7.10.3
+    "@babel/plugin-proposal-decorators": ^7.10.3
     "@babel/plugin-transform-runtime": ^7.10.1
     "@babel/preset-typescript": ^7.10.1
     "@babel/register": ^7.10.1
@@ -5972,6 +6022,7 @@ __metadata:
     css-loader: ^3.6.0
     file-loader: ^6.0.0
     html-webpack-plugin: ^4.3.0
+    lit-element: ^2.3.1
     mini-css-extract-plugin: ^0.9.0
     postcss-import: ^12.0.1
     postcss-loader: ^3.0.0
@@ -9565,6 +9616,22 @@ fsevents@~2.1.2:
   version: 1.1.6
   resolution: "lines-and-columns@npm:1.1.6"
   checksum: 798b80ed7ae3fba34d43fe29591ccb4f16f6fca1da4e1f9922b92264b91d931012433c248daf8e44caa74feb40c0eaa0f27a14f8ee68b6ffb425f3c3f785af27
+  languageName: node
+  linkType: hard
+
+"lit-element@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "lit-element@npm:2.3.1"
+  dependencies:
+    lit-html: ^1.1.1
+  checksum: ad6d95de31d60dce5624689201101fd092b2456fc81e4326c16db9d989eb1c7dc47c949b0e4614d0f53f1b59a0573ef7e0e104d33872eedb13a26e0b187aeb34
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^1.1.1":
+  version: 1.2.1
+  resolution: "lit-html@npm:1.2.1"
+  checksum: 626da82966585834d7160b5e57f3aaa20fb8e38b0271e7dd7b6b66ed7e699fb793afee566069def7d55152c3d83acc5d4dbeed98069ee7120bb6ab04c87a97bf
   languageName: node
   linkType: hard
 
