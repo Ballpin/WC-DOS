@@ -48,11 +48,36 @@ function buildConfig(configDirs) {
         },
         {
           test: /\.pcss$/,
+          exclude: /\.component\.pcss$/,
           use: [
             'to-string-loader',
             'style-loader',
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            { loader: 'postcss-loader', options: {
+            {loader: 'css-loader', options: {importLoaders: 1}},
+            {
+              loader: 'postcss-loader', options: {
+                ident: 'postcss',
+                plugins: () => [
+                  postcssImport({
+                    root: rootPath,
+                    path: ['node_modules/tailwindcss', 'src/styles'],
+                  }),
+                  tailwindcss('./config/tailwind/tailwind.config.js'),
+                  postcssPresetEnv({
+                    stage: 0,
+                    browsers: 'last 2 versions'
+                  }),
+                ]
+              }
+            },
+          ]
+        },
+        {
+          test: /\.component.pcss$/i,
+          use: [
+            'to-string-loader',
+            {loader: 'css-loader', options: {importLoaders: 1}},
+            {
+              loader: 'postcss-loader', options: {
                 ident: 'postcss',
                 plugins: () => [
                   postcssImport({
